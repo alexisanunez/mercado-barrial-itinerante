@@ -253,3 +253,34 @@ footer p {
   /* tamaño de los íconos */
   height: 24px;
 }
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas en desktop */
+  gap: 25px;
+  padding: 50px 30px;
+}
+
+.grid-galeria a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: stretch; /* recorta la imagen si no encaja bien */
+  transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05); /* efecto al pasar el mouse */
+}
+
+/* Responsive: en pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
