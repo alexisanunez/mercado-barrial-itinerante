@@ -28,16 +28,21 @@ body {
   background-color: #FFBC00;
 }
 
-html, body {
-  height: 100%;          /* para que el body ocupe toda la altura */
-  margin: 0;             /* quitar márgenes por defecto */ 
-  display: flex;         
-  flex-direction: column; /* columnas: header + main + footer */
+html,
+body {
+  height: 100%;
+  /* para que el body ocupe toda la altura */
+  margin: 0;
+  /* quitar márgenes por defecto */
+  display: flex;
+  flex-direction: column;
+  /* columnas: header + main + footer */
 }
 
 
 main {
-  flex: 1; /* se estira para empujar el footer hacia abajo */
+  flex: 1;
+  /* se estira para empujar el footer hacia abajo */
   justify-content: flex-start;
 }
 
@@ -157,7 +162,7 @@ nav ul li a:hover {
 }
 
 
-.left { 
+.left {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -256,7 +261,8 @@ footer p {
 
 .grid-galeria {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 columnas en desktop */
+  grid-template-columns: repeat(6, 1fr);
+  /* 6 columnas en desktop */
   gap: 25px;
   padding: 50px 30px;
 }
@@ -270,17 +276,20 @@ footer p {
 .grid-galeria img {
   width: 100%;
   height: 100%;
-  object-fit: stretch; /* recorta la imagen si no encaja bien */
+  object-fit: stretch;
+  /* recorta la imagen si no encaja bien */
   transition: transform 0.3s ease;
 }
 
 .grid-galeria img:hover {
-  transform: scale(1.05); /* efecto al pasar el mouse */
+  transform: scale(1.05);
+  /* efecto al pasar el mouse */
 }
 
 /* Responsive: en pantallas pequeñas */
 @media (max-width: 768px) {
   .grid-galeria {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
   }
 }
