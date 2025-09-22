@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,74 +14,47 @@
 
 <body>
 
-  <header>
-    <!-- Logo -->
-    <a href="index.html">
-     <img src="images/logo.png" alt="Logo del Mercado" class="logo">
-    </a>
-
-    <!-- Menú -->
-    <nav>
-      <ul>
-              <li class="dropdown">
-        <a href="#">PUESTOS ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="comidas.html">comidas</a></li>
-          <li><a href="placeholder2.html">pasteleria</a></li>
-          <li><a href="placeholder3.html">panaderia</a></li>
-          <li><a href="placeholder4.html">textíl</a></li>
-          <li><a href="placeholder5.html">artesanias</a></li>
-          <li><a href="placeholder6.html">decoracion</a></li>
-          <li><a href="placeholder7.html">carpinteria</a></li>
-          <li><a href="placeholder8.html">marroquineria</a></li>
-          <li><a href="placeholder9.html">regaleria</a></li>
-          <li><a href="placeholder10.html">conservas</a></li>
-          <li><a href="placeholder11.html">muñecos y peluches</a></li>
-          <li><a href="placeholder12.html">sahumerios</a></li>
-          <li><a href="placeholder13.html">moldeados de hormigon</a></li>
-        </ul>
-      </li>
-        <li><a href="quienes.html">¿QUIÉNES SOMOS?</a></li>
-        <li><a href="sumate.html">SUMÁTE A LA FERIA</a></li>
-      </ul>
-    </nav>
-  </header>
-
-<!-- Imagen principal -->
-<section class="hero">
-  <img src="images/pattern.png" alt="Imagen del mercado" class="main-image">
-</section>
-
-<section class="content">
-  <!-- Columna izquierda: imagen de horarios -->
-  <div class="left">
-    <img src="images/horarios.png" alt="Horarios de la feria">
-  </div>
-
-  <!-- Columna derecha: carrusel -->
-  <div class="right">
-    <div class="carousel">
-      <img src="images/frase-1.png" alt="Slide 1" class="active">
-      <img src="images/frase-2.png" alt="Slide 2">
-      <img src="images/frase-3.png" alt="Slide 3">
-    </div>
-  </div>
-</section>
-
-<script>
-  const slides = document.querySelectorAll('.right img');
-  let current = 0;
-  const interval = 5000; // 3 segundos
-
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, interval);
-</script>
+  <div id="navbar"></div>
 
   <main>
+    <!-- patron -->
+    <div class="hero">
+      <img src="images/pattern.png" alt="Imagen del mercado" class="main-image">
+    </div>
+
+    <section class="content">
+      <!-- Columna izquierda: imagen de horarios -->
+      <div class="left">
+        <img src="images/horarios.png" alt="Horarios de la feria">
+      </div>
+
+      <!-- Columna derecha: carrusel -->
+      <div class="right">
+        <div class="carousel">
+          <img src="images/frase-1.png" alt="Slide 1" class="active">
+          <img src="images/frase-2.png" alt="Slide 2">
+          <img src="images/frase-3.png" alt="Slide 3">
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const slides = document.querySelectorAll('.right img');
+      let current = 0;
+      const interval = 3000; // 3 segundos
+
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, interval);
+    </script>
   </main>
 
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>

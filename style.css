@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'GoboldBold';
   src: url('fonts/Gobold\ Bold.otf') format('opentype');
@@ -24,9 +23,22 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-image: url('images/patron.png');
-  background-repeat: repeat;  /* se repite automáticamente */
-  background-size: 78px 78px; /* tamaño del patrón */
+  background-repeat: repeat;
+  background-size: 78px 78px;
   background-color: #FFBC00;
+}
+
+html, body {
+  height: 100%;          /* para que el body ocupe toda la altura */
+  margin: 0;             /* quitar márgenes por defecto */ 
+  display: flex;         
+  flex-direction: column; /* columnas: header + main + footer */
+}
+
+
+main {
+  flex: 1; /* se estira para empujar el footer hacia abajo */
+  justify-content: flex-start;
 }
 
 header {
@@ -35,12 +47,15 @@ header {
   justify-content: space-between;
   background-color: #EA0000;
   padding: 13px 15px 5px 15px;
-  position: relative; /* aseguramos posición relativa */
-  z-index: 10;        /* siempre por encima de la imagen */
+  position: relative;
+  /* aseguramos posición relativa */
+  z-index: 10;
+  /* siempre por encima de la imagen */
 }
 
 header img {
-  height: 35px; /* ajustá el tamaño del logo */
+  height: 35px;
+  /* ajustá el tamaño del logo */
 }
 
 nav ul {
@@ -70,9 +85,11 @@ nav ul li a:hover {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* justo debajo del botón */
+  top: 100%;
+  /* justo debajo del botón */
   left: 0;
-  background-color: #EA0000; /* mismo color que la barra */
+  background-color: #EA0000;
+  /* mismo color que la barra */
   list-style: none;
   margin: 0;
   padding: 10px 0;
@@ -94,7 +111,8 @@ nav ul li a:hover {
 
 .dropdown-menu li a:hover {
   color: white;
-  background-color: #b30000; /* rojo más oscuro al pasar el mouse */
+  background-color: #b30000;
+  /* rojo más oscuro al pasar el mouse */
 }
 
 .dropdown:hover .dropdown-menu {
@@ -105,72 +123,133 @@ nav ul li a:hover {
 
 /* Imagen principal */
 .hero img {
-  width: 100%;    /* ocupa todo el ancho */
-  height: auto;   /* altura proporcional, crece hacia abajo */
-  display: block; /* elimina espacio debajo de la imagen */
-  margin: 0;      /* sin márgenes */
+  width: 100%;
+  /* ocupa todo el ancho */
+  height: auto;
+  /* altura proporcional, crece hacia abajo */
+  display: block;
+  /* elimina espacio debajo de la imagen */
+  margin: 0;
+  /* sin márgenes */
 }
 
 .quienes img {
-  width: 100%;    /* ocupa todo el ancho */
+  width: 100%;
+  /* ocupa todo el ancho */
   align-items: stretch;
-  height: auto;   /* altura proporcional, crece hacia abajo */
-  display: flex; /* elimina espacio debajo de la imagen */
-  padding: 20px 10px;
-  margin: 0;      /* sin márgenes */
+  height: auto;
+  display: flex;
+  padding: 20px 20px;
   box-sizing: border-box;
 }
 
 /* Contenedor principal dividido en dos */
 .content {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;   /* centra verticalmente dentro de la sección */
+  justify-content: flex-start;
+  align-items: stretch;
+  /* centra verticalmente dentro de la sección */
   width: 100%;
-  height: 100%;         /* altura fija, ajusta según necesites */
+  /* altura fija, ajusta según necesites */
   padding: 20px 20px;
   box-sizing: border-box;
-  gap: 0;
+  gap: 20;
 }
 
 
-.left{
+.left { 
   flex: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+
+.left img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 550px;
 }
 
 
 .right {
   flex: 1.2;
+  flex-direction: column;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+  align-items: flex-start;
+  padding: 10px;
 }
 
 
-/* Columna izquierda */
-.left img{
+.right img {
   width: 100%;
-  height: 100%;
-
-  object-fit: contain; 
-  display: block;
-}
-
-
-.right img{
-  width: 100%;
-  height: 100%;
-
   object-fit: contain;
   display: none;
   transition: opacity 0.5s ease-in-out;
+  max-height: 700px;
 }
 
 .right img.active {
   display: block;
+}
+
+.sumate {
+  display: flex;
+  justify-content: center;
+  /* centra la imagen horizontalmente */
+  align-items: center;
+  /* centra verticalmente si le das altura */
+  padding: 25px 20px;
+  /* espacio alrededor */
+}
+
+.sumate img {
+  width: 100%;
+  max-width: 1200px;
+  /* nunca se pasa del ancho de la página */
+  height: auto;
+  /* mantiene proporción */
+  max-height: 600 px;
+  /* opcional: limita el alto */
+}
+
+
+footer {
+  background-color: #EA0000;
+  color: #fff;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-icons img {
+  width: 24px;
+  /* tamaño de los íconos */
+  height: 24px;
 }
