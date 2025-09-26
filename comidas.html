@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comidas</title>
+  <title>Mercado Itinerante | Decoracion</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
+  <script src="favicon.js"></script>
+  <link href="lightbox2-2.11.5/dist/css/lightbox.css" rel="stylesheet">
 </head>
+
 <body>
-
-  <header>
-    <!-- Logo -->
-    <a href="index.html">
-     <img src="images/logo.png" alt="Logo del Mercado" class="logo">
-    </a>
-
-    <!-- Menú -->
-    <nav>
-      <ul>
-              <li class="dropdown">
-        <a href="#">PUESTOS ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="comidas.html">comidas</a></li>
-          <li><a href="placeholder2.html">pasteleria</a></li>
-          <li><a href="placeholder3.html">panaderia</a></li>
-          <li><a href="placeholder4.html">textíl</a></li>
-          <li><a href="placeholder5.html">artesanias</a></li>
-          <li><a href="placeholder6.html">decoracion</a></li>
-          <li><a href="placeholder7.html">carpinteria</a></li>
-          <li><a href="placeholder8.html">marroquineria</a></li>
-          <li><a href="placeholder9.html">regaleria</a></li>
-          <li><a href="placeholder10.html">conservas</a></li>
-          <li><a href="placeholder11.html">muñecos y peluches</a></li>
-          <li><a href="placeholder12.html">sahumerios</a></li>
-          <li><a href="placeholder13.html">moldeados de hormigon</a></li>
-        </ul>
-      </li>
-        <li><a href="quienes.html">¿QUIÉNES SOMOS?</a></li>
-        <li><a href="sumate.html">SUMÁTE A LA FERIA</a></li>
-      </ul>
-    </nav>
-  </header>
-
-<!-- Imagen principal -->
-<section class="hero">
-  <img src="images/pattern.png" alt="Imagen del mercado" class="main-image">
-</section>
-
+  <div id="navbar"></div>
   <main>
+    <div class="hero">
+      <img src="images/pattern.png" alt="patrón triangular" class="main-image">
+    </div>
+
+
+    <section class="peluches">
+      <img src="images/comidas/comidas-titulo.png" alt="titulo comidas">
+    </section>
+
+    <section class="peluches">
+      <a href="images/comidas/epigrafe-galeria.jpeg" data-lightbox="galeriaEpigrafe">
+        <img src="images/comidas/comidas-epigrafe.png" alt="portada-galeria" class="portada-galeria">
+      </a>
+    </section>
+
+    <section class="contacto">
+      <p>Contacto: 351 26 29 064 o 351 66 04 315 (Ituzaingó)</p>
+    </section>
+
+    <section class="peluches peluches-texto">
+      <p>Nuestra propuesta combina lo mejor de la tradición popular y doméstica, con comidas al paso que todos
+        disfrutamos en muchas oportunidades: super panchos, empanadas árabes y criollas.
+
+        Estamos presentes en ferias, eventos públicos y privados, y también atendemos desde casa los fines de semana,
+        compartiendo con vecinos y clientes que ya nos eligen y nos hacen sus pedidos durante la semana.
+
+        Nosotros priorizamos lo casero, lo abundante y lo sabroso, porque creemos que cada comida es un encuentro
+        fraternal con amigos y familia. Por eso te recomendamos que pruebes nuestro productos hechos con la mejor
+        calidad en ingredientes y con un sabor familiar</p>
+    </section>
+
+    <section class="peluches peluches-galeria">
+      <a href="images/comidas/galeria-comidas-1.png" data-lightbox="galeriaComidas" data-title="Foto 1">
+        <img src="images/comidas/comidas-galeria.png" alt="portada-galeria" class="portada-galeria">
+      </a>
+    </section>
+
+    <a href="images/comidas/galeria-comidas-2.jpeg" data-lightbox="galeriaComidas"></a>
+    <a href="images/comidas/galeria-comidas-3.jpeg" data-lightbox="galeriaComidas"></a>
+    <a href="images/comidas/galeria-comidas-4.jpeg" data-lightbox="galeriaComidas"></a>
+    <a href="images/comidas/galeria-comidas-5.jpeg" data-lightbox="galeriaComidas"></a>
+    <a href="images/comidas/galeria-comidas-6.jpeg" data-lightbox="galeriaComidas"></a>
+    <a href="images/comidas/galeria-comidas-7.jpeg" data-lightbox="galeriaComidas"></a>
   </main>
 
+
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+  <script src="lightbox2-2.11.5/dist/js/lightbox-plus-jquery.js"></script>
 </body>
+
 </html>

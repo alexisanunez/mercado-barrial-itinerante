@@ -486,4 +486,14 @@ footer p {
     left: 6px;
   }
 
+  .lb-prev,
+  .lb-next {
+    display: block !important;   /* forzar que aparezcan */
+    opacity: 0.5 !important;       /* asegurar visibilidad */
+    width: 5px;                 /* más chicas en móvil */
+    height: 5px;
+    top: 50%;                    /* centradas verticalmente */
+
+  }
+
 }
