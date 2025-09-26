@@ -1,9 +1,9 @@
 // Cargar el header en el div con id="navbar"
-fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-    });
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
 
 // Insertar footer automáticamente
 document.addEventListener("DOMContentLoaded", () => {

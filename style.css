@@ -19,6 +19,31 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'JackInput';
+  src: url('fonts/JAi_____.TTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  /* nunca se salen de su contenedor */
+  height: auto;
+  display: block;
+}
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -31,18 +56,14 @@ body {
 html,
 body {
   height: 100%;
-  /* para que el body ocupe toda la altura */
   margin: 0;
-  /* quitar márgenes por defecto */
   display: flex;
   flex-direction: column;
-  /* columnas: header + main + footer */
 }
 
 
 main {
   flex: 1;
-  /* se estira para empujar el footer hacia abajo */
   justify-content: flex-start;
 }
 
@@ -53,14 +74,11 @@ header {
   background-color: #EA0000;
   padding: 13px 15px 5px 15px;
   position: relative;
-  /* aseguramos posición relativa */
   z-index: 10;
-  /* siempre por encima de la imagen */
 }
 
 header img {
   height: 35px;
-  /* ajustá el tamaño del logo */
 }
 
 nav ul {
@@ -78,23 +96,11 @@ nav ul li a {
   font-size: 0.7rem;
 }
 
-@media (min-width: 1024px) {
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
-  nav ul {
-    gap: 30px;
-    padding: 0px 15px;
-  }
-}
 
 nav ul li a:hover {
   color: black;
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -103,10 +109,8 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  /* justo debajo del botón */
   left: 0;
   background-color: #EA0000;
-  /* mismo color que la barra */
   list-style: none;
   margin: 0;
   padding: 10px 0;
@@ -129,7 +133,6 @@ nav ul li a:hover {
 .dropdown-menu li a:hover {
   color: white;
   background-color: #b30000;
-  /* rojo más oscuro al pasar el mouse */
 }
 
 .dropdown:hover .dropdown-menu {
@@ -137,22 +140,75 @@ nav ul li a:hover {
 }
 
 
+.marco {
+  display: inline-block;
+  position: relative;
+  max-width: 80%;
+}
 
-/* Imagen principal */
+.marco img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.marco::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 9px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid black;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.frentebanner {
+  text-align: center;
+}
+
+.marco-frentebanner {
+  display: inline-block;
+  position: relative;
+  max-width: 90%;
+}
+
+.marco-frentebanner img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
 .hero img {
   width: 100%;
-  /* ocupa todo el ancho */
   height: auto;
-  /* altura proporcional, crece hacia abajo */
   display: block;
-  /* elimina espacio debajo de la imagen */
-  margin: 0;
-  /* sin márgenes */
 }
+
+.quienes-somos-feria {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 20px;
+}
+
+
+.quienes-somos-feria img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+
 
 .quienes-text img {
   width: 100%;
-  /* ocupa todo el ancho */
   align-items: stretch;
   height: auto;
   display: flex;
@@ -161,64 +217,33 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-.frentebanner img {
-  width: 100%;
-  /* ocupa todo el ancho */
-  align-items: stretch;
-  height: auto;
-  display: block;
-  padding: 0px 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
+
+
+.democraciabandera {
+  text-align: center;
+  /* centra la imagen */
 }
 
 .democraciabandera img {
-  width: 100%;
-  /* ocupa todo el ancho */
-  align-items: stretch;
+  display: block;
+  width: auto;
+  max-width: 90%;
   height: auto;
-  display: flex;
-  padding: 0px 20px 50px 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-
-  .quienes-text img,
-  .frentebanner img,
-  .democraciabandera img {
-    max-width: 70%;
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .quienes-text img {
-    padding: 40px 20px 100px 20px;
-  }
+  margin: 20px auto;
 }
 
 
-/* Contenedor principal dividido en dos */
+
 .content {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  /* centra verticalmente dentro de la sección */
   width: 100%;
-  /* altura fija, ajusta según necesites */
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 20px 20px;
   box-sizing: border-box;
   gap: 20;
 }
 
-@media (min-width: 1024px) {
-
-  .content {
-    padding: 60px 20px 50px 20px;
-  }
-}
 
 .left {
   flex: 2;
@@ -262,30 +287,17 @@ nav ul li a:hover {
 .sumate {
   display: flex;
   justify-content: center;
-  /* centra la imagen horizontalmente */
   align-items: center;
-  /* centra verticalmente si le das altura */
   padding: 25px 20px;
-  /* espacio alrededor */
 }
 
 .sumate img {
   width: 100%;
   max-width: 1200px;
-  /* nunca se pasa del ancho de la página */
   height: auto;
-  /* mantiene proporción */
   max-height: 600 px;
-  /* opcional: limita el alto */
+  padding: 20px 0px;
 }
-
-@media (min-width: 1024px) {
-
-  .sumate img {
-    padding: 50px 0px;
-  }
-}
-
 
 footer {
   background-color: #EA0000;
@@ -320,16 +332,14 @@ footer p {
 
 .social-icons img {
   width: 24px;
-  /* tamaño de los íconos */
   height: 24px;
 }
 
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* 6 columnas en desktop */
   gap: 25px;
-  padding: 30px 30px;
+  padding: 30px 125px 70px;
 }
 
 .grid-galeria a {
@@ -342,26 +352,138 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: stretch;
-  /* recorta la imagen si no encaja bien */
   transition: transform 0.3s ease;
 }
 
 .grid-galeria img:hover {
   transform: scale(1.05);
-  /* efecto al pasar el mouse */
 }
 
-/* Responsive: en pantallas pequeñas */
-@media (max-width: 768px) {
-  .grid-galeria {
-    grid-template-columns: repeat(3, 1fr);
-    /* 2 columnas */
-  }
+.peluches {
+  text-align: center;
+}
+
+.peluches img {
+  display: block;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.peluches-texto {
+  display: block;
+  max-width: 90%;
+  margin: 20px auto;
+  font-family: 'JackInput';
+  text-align: left;
+}
+
+.contacto {
+  display: inline-block;
+  max-width: 90%;
+  font-family: 'GoboldRegu';
+  text-align: left;
+  font-size: 91%;
+  margin: 0px auto;
+  color: #fff;
+  background-color: #4AB64D;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.peluches-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1330px;
+  width: 100%;
+}
+
+.peluches-galeria img.portada-galeria {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 10px auto 50px auto;
 }
 
 @media (min-width: 1024px) {
 
-  .grid-galeria {
-    padding: 30px 125px 70px;
+  .peluches-texto {
+    width: 1205px;
+    max-width: 90%;
+    font-family: 'JackInput';
+    text-align: left;
+    font-size: 200%;
+    margin: 0px auto;
   }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .quienes-combo {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .quienes-text,
+  .quienes-somos-feria {
+    width: 40%;
+  }
+
+
+  .quienes-text img {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px 100px 20px;
+  }
+
+  .peluches {
+    max-width: 70%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+
+  .contacto {
+    display: inline-block;
+    max-width: 100%;
+    font-family: 'GoboldRegu';
+    text-align: left;
+    font-size: 200%;
+    margin: 0px auto;
+    color: #fff;
+    background-color: #4AB64D;
+    padding: 15px;
+    margin-left: 379px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .grid-galeria {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 30px 50px 30px;
+  }
+
+  .marco-frentebanner {
+    max-width: 90%;
+  }
+
+  .marco::after {
+    border: 2px solid black;
+    top: -6px;
+    left: 6px;
+  }
+
 }
