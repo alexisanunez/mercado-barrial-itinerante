@@ -374,22 +374,23 @@ footer p {
 .peluches-texto {
   display: block;
   max-width: 90%;
-  margin: 20px auto;
+  margin: 20px auto 10px;
   font-family: 'JackInput';
   text-align: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .contacto {
-  display: inline-block;
-  max-width: 90%;
+  display: block;
+  max-width: 100%;
   font-family: 'GoboldRegu';
-  text-align: left;
+  text-align: center;
   font-size: 91%;
-  margin: 0px auto;
   color: #fff;
-  background-color: #4AB64D;
-  padding: 5px;
-  margin-left: 20px;
+  background-color: #48ac4b;
+  padding: 8px;
+  margin: 8px 20px;
 }
 
 .peluches-galeria {
@@ -399,6 +400,7 @@ footer p {
   margin: 0 auto;
   max-width: 1330px;
   width: 100%;
+
 }
 
 .peluches-galeria img.portada-galeria {
@@ -407,6 +409,7 @@ footer p {
   display: block;
   margin: 10px auto 50px auto;
 }
+
 
 @media (min-width: 1024px) {
 
@@ -455,22 +458,32 @@ footer p {
 
 
   .contacto {
-    display: inline-block;
+    display: block;
     max-width: 100%;
     font-family: 'GoboldRegu';
-    text-align: left;
+    text-align: center;
     font-size: 200%;
     margin: 0px auto;
-    color: #fff;
-    background-color: #4AB64D;
     padding: 15px;
-    margin-left: 379px;
+    margin: 0px 379px;
   }
+
 
 }
 
 
 @media (max-width: 768px) {
+
+  .titulo img {
+    padding: 20px 0px 20px 0px;
+    margin: 0 auto;
+  }
+
+  .epigrafe img {
+    padding: 0px;
+    margin: 0 auto;
+  }
+
   .grid-galeria {
     grid-template-columns: repeat(3, 1fr);
     padding: 0px 30px 50px 30px;
@@ -489,10 +502,10 @@ footer p {
 
   .lb-prev,
   .lb-next {
-    opacity: 0.5 !important; 
-    width: 5px; 
+    opacity: 0.5 !important;
+    width: 5px;
     height: 5px;
-    top: 50%; 
+    top: 50%;
   }
 
 }
