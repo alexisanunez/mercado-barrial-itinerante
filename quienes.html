@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/site.webmanifest">
+  <link href="lightbox2-2.11.5/dist/css/lightbox.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,12 +26,27 @@
       <section class="quienes-text">
         <img src="images/quienes-somos-long.png" alt="quienes-somos-texto">
       </section>
-      <section class="quienes-somos-feria">
-        <div class="marco marco-quienes-somos-feria">
-          <img src="images/quienes-somos-feria.jpeg" alt="puestos de la feria en accion">
-        </div>
-      </section>
     </div>
+
+    <div class="redes-container">
+      <a href="https://www.instagram.com/fpds.cordoba" target="_blank" rel="noopener noreferrer"
+        class="redes-button ig">
+        <img src="icons/instagram-blanco.svg" alt="Instagram" class="icono">
+        <span>FPDS - Instagram</span>
+      </a>
+
+      <a href="https://www.facebook.com/share/1CHNwTg82J/" target="_blank" rel="noopener noreferrer"
+        class="redes-button fb">
+        <img src="icons/facebook-blanco.svg" alt="Facebook" class="icono">
+        <span>FPDS - Facebook</span>
+      </a>
+    </div>
+
+    <section class="peluches peluches-galeria">
+      <a href="images/quienes-somos-feria.jpeg" data-lightbox="galeriaQuienes">
+        <img src="images/quienes-somos-galeria.png" alt="portada-galeria" class="portada-galeria">
+      </a>
+    </section>
 
     <section class="frentebanner">
       <div class="marco-frentebanner">
@@ -46,7 +62,7 @@
   <div id="footer"></div>
 
   <script src="script.js"></script>
-
+  <script src="lightbox2-2.11.5/dist/js/lightbox-plus-jquery.js"></script>
 </body>
 
 </html>

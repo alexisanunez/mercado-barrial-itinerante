@@ -189,22 +189,6 @@ nav ul li a:hover {
   display: block;
 }
 
-.quienes-somos-feria {
-  position: relative;
-  text-align: center;
-  display: block;
-  margin: 20px;
-}
-
-
-.quienes-somos-feria img {
-  width: 100%;
-  height: auto;
-  display: block;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
 
 
 .quienes-text img {
@@ -379,6 +363,7 @@ footer p {
   text-align: left;
   hyphens: auto;
   overflow-wrap: break-word;
+  white-space: pre-line;
 }
 
 .contacto {
@@ -410,6 +395,42 @@ footer p {
   margin: 10px auto 50px auto;
 }
 
+.redes-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.redes-button {
+  display: inline-flex;      
+  align-items: center;  
+  gap: 8px;        
+  padding: 10px 15px;
+  text-decoration: none;  
+  color: white; 
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.redes-button.ig {
+  background-color: #E1306C;
+}
+
+.redes-button.fb {
+  background-color: #1877F2;
+}
+
+.redes-button:hover {
+  opacity: 0.85;
+}
+
+.icono {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
 
 @media (min-width: 1024px) {
 
