@@ -277,7 +277,7 @@ nav ul li a:hover {
 
 .sumate img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1150px;
   height: auto;
   max-height: 600 px;
   padding: 20px 0px;
@@ -376,6 +376,18 @@ footer p {
   background-color: #48ac4b;
   padding: 8px;
   margin: 8px 20px;
+  text-decoration: none;
+}
+
+.contacto:hover {
+  opacity: 0.85;
+}
+
+
+.contacto a {
+
+  text-decoration: none;
+  color: inherit;
 }
 
 .peluches-galeria {
@@ -400,18 +412,22 @@ footer p {
   gap: 15px;
   justify-content: center;
   width: 90%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .redes-button {
-  display: inline-flex;      
-  align-items: center;  
-  gap: 8px;        
-  padding: 10px 15px;
-  text-decoration: none;  
-  color: white; 
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: thin;
   font-size: 14px;
+  font-family: 'GoboldRegu';
+  cursor: pointer;
 }
 
 .redes-button.ig {
@@ -422,17 +438,60 @@ footer p {
   background-color: #1877F2;
 }
 
+.redes-button.wsp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #34a538;
+  color: white;
+  text-decoration: none;
+}
+
 .redes-button:hover {
   opacity: 0.85;
 }
 
+.redes-button span {
+  cursor: pointer;
+}
+
+.redes-button img {
+  cursor: pointer;
+}
+
 .icono {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
   vertical-align: middle;
 }
 
 @media (min-width: 1024px) {
+
+  .icono {
+    width: 25px;
+    height: 25px;
+  }
+
+  .redes-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .redes-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: thin;
+    font-size: 30px;
+    font-family: 'GoboldRegu';
+  }
 
   .peluches-texto {
     width: 1205px;
@@ -487,6 +546,7 @@ footer p {
     margin: 0px auto;
     padding: 15px;
     margin: 0px 379px;
+
   }
 
 
