@@ -466,7 +466,37 @@ footer p {
   vertical-align: middle;
 }
 
+.titulo-error {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'JackInput';
+  margin: 150px auto ;
+  text-align: center; /* ✅ centra el texto */
+}
+
+.error-cabecera{
+  font-size: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.error-cuerpo{
+  padding: 20px;
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
+
+.error-cabecera {
+  font-size: 60px;
+}
+
+.error-cuerpo {
+  font-size: 30px;
+}
 
   .icono {
     width: 25px;
