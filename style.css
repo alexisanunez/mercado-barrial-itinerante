@@ -358,7 +358,7 @@ footer p {
 .peluches-texto {
   display: block;
   max-width: 90%;
-  margin: 20px auto 10px;
+  margin: 0px auto 10px;
   font-family: 'JackInput';
   text-align: left;
   hyphens: auto;
@@ -397,7 +397,6 @@ footer p {
   margin: 0 auto;
   max-width: 1330px;
   width: 100%;
-
 }
 
 .peluches-galeria img.portada-galeria {
@@ -412,7 +411,7 @@ footer p {
   gap: 15px;
   justify-content: center;
   width: 90%;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 .redes-button {
