@@ -250,7 +250,7 @@ footer {
 }
 
 footer p {
-  margin: 0 0 10px 0;
+  margin: 10px 0 10px 0;
   font-size: 14px;
 }
 
@@ -266,11 +266,17 @@ footer p {
 
 .social-icons {
   margin-top: 10px;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
 }
 
 .social-icons a {
-  display: inline-block;
-  margin: 0 10px;
+  display: flex;         /* pone texto + icono en línea */
+  align-items: center;   /* centra verticalmente */
+  gap: 8px;              /* espacio entre texto e icono */
+  text-decoration: none; /* quita subrayado */
+  color: #fff;           /* color del texto */
+  font-size: 16px;
 }
 
 .social-icons img {
