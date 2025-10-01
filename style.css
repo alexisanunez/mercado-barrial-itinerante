@@ -256,7 +256,6 @@ footer p {
 
 .footer-links a {
   color: #ccc;
-  text-decoration: none;
   margin: 0 8px;
 }
 
@@ -267,16 +266,16 @@ footer p {
 .social-icons {
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* centra horizontalmente */
+  justify-content: center;
 }
 
+
 .social-icons a {
-  display: flex;         /* pone texto + icono en línea */
-  align-items: center;   /* centra verticalmente */
-  gap: 8px;              /* espacio entre texto e icono */
-  text-decoration: none; /* quita subrayado */
-  color: #fff;           /* color del texto */
-  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #fff;
+  font-size: 15px;
 }
 
 .social-icons img {
