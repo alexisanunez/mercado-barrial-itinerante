@@ -154,7 +154,12 @@ nav ul li a:hover {
   display: block;
 }
 
-
+.hero2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 30px auto;
+}
 
 .quienes-text img {
   width: 100%;
